@@ -1,21 +1,34 @@
 ---
-import PlotFigure from "../components/PlotFigure.astro";
 import Layout from "../layouts/Layout.astro";
-import * as Plot from "@observablehq/plot";
-import penguins from "../assets/penguins.json";
 ---
 
 <Layout>
-  <h1 class="text-2xl">Test Astro et Plot (Observablehq)</h1>
-  <PlotFigure
-    options={{
-      marks: [
-        Plot.dot(penguins, {
-          x: "culmen_length_mm",
-          y: "culmen_depth_mm",
-          stroke: "species",
-        }),
-      ],
-    }}
-  />
+  <h1
+    class="text-5xl md:text-6xl font-black text-indigo-800 text-center mb-16 select-none mt-20 drop-shadow-lg"
+  >
+    Menu
+  </h1>
+
+  <nav class="mt-20">
+    <ul class="flex flex-col gap-8 justify-center items-center">
+      <li>
+        <a
+          href="/species/Adelie"
+          class="text-xl font-semibold text-indigo-50 bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 px-6 py-3 rounded-xl shadow-lg transition-all duration-200 transform hover:scale-105"
+        >Manchot Adélie</a>
+      </li>
+      <li>
+        <a
+          href="/species/Chinstrap"
+          class="text-xl font-semibold text-indigo-50 bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 px-6 py-3 rounded-xl shadow-lg transition-all duration-200 transform hover:scale-105"
+        >Manchot Chinstrap</a>
+      </li>
+      <li>
+        <a
+          href="/species/Gentoo"
+          class="text-xl font-semibold text-indigo-50 bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 px-6 py-3 rounded-xl shadow-lg transition-all duration-200 transform hover:scale-105"
+        >Manchot Gentoo</a>
+      </li>
+    </ul>
+  </nav>
 </Layout>
